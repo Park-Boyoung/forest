@@ -114,24 +114,24 @@ section .city .cityimg{
 
 @keyframes rotatemoon {
     0%{
-        transform: translateY(-100px) rotate(-100deg);
-        opacity: 0;
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
     }
     25%{
-        transform: translateY(-100px) rotate(-280deg);
+        transform: translateY(-100px) rotate(-90deg);
         opacity: 0;
     }
     50%{
-        transform: translateY(-100px) rotate(-330deg);
-        opacity: 1;
+        transform: translateY(-100px) rotate(-180deg);
+        opacity: 0;
     }
     75%{
-        transform: translateY(-100px) rotate(-390deg);
+        transform: translateY(-100px) rotate(-270deg);
         opacity: 0;
     }
     100%{
-        transform: translateY(-100px) rotate(-450deg);
-        opacity: 0;
+        transform: translateY(-100px) rotate(-360deg);
+        opacity: 1;
     }
 }
 
