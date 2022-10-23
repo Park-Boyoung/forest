@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #cefeff;
+    animation: back 15s linear infinite;
+    /* overflow: hidden; */
+}
+
+section{
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    /* 가로세로 가운데정렬 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: bisque; */
+}
+
+section .sky{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+section .sky .sun{
+    position: absolute;
+    width: 180px;
+    display: block;
+    left: 50%;
+    margin-left: -90px;
+    transform-origin: 50% 600px;
+    /* animation: ; */
+    animation: rotatesun 10s linear infinite;
+}
+
+section .sky .moon{
+    width: 160px;
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -90px;
+    transform-origin: 50% 600px;
+    animation: rotatemoon 10s linear infinite;
+}
+
+section .sky .cloud1{
+    width: 160px;
+    position: absolute;
+    animation: rotatecloud1 8s linear infinite;
+}
+section .sky .cloud2{
+    width: 90px;
+    position: absolute;
+    animation: rotatecloud2 8s linear infinite;
+}
+
+section .city{
+    position: relative;
+    width: 100%;
+}
+
+section .city .cityimg{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* keyframe */
+@keyframes back {
+    0%{
+        background-color: paleturquoise;
+    }
+    25%{
+        background-color: palevioletred;
+    }
+    50%{
+        background-color: purple;
+    }
+    75%{
+        background-color: palevioletred;
+    }
+    100%{
+        background-color: paleturquoise;
+    }
+}
+@keyframes rotatesun {
+    0%{
+        transform: translateY(-100px) rotate(-180deg);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(-100px) rotate(-90deg);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(-100px) rotate(90deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-100px) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rotatemoon {
+    0%{
+        transform: translateY(-100px) rotate(-100deg);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(-100px) rotate(-280deg);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-100px) rotate(-330deg);
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(-100px) rotate(-390deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-100px) rotate(-450deg);
+        opacity: 0;
+    }
+}
+
+@keyframes rotatecloud1 {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(1000px);
+        opacity: 1;
+    }
+    100%{
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes rotatecloud2 {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(800px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
